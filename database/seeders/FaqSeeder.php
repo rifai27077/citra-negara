@@ -43,13 +43,13 @@ TEXT,
             [
                 'question' => 'Jurusan apa saja di SMK Citra Negara?,Program keahlian SMK Citra Negara?',
                 'answer'   => <<<TEXT
-Jurusan di SMK Citra Negara:
-- RPL (Rekayasa Perangkat Lunak)
-- TKJ (Teknik Komputer & Jaringan)
-- Multimedia
-- BDP (Bisnis Daring & Pemasaran)
-- OTKP (Otomatisasi Tata Kelola Perkantoran)
-- Perhotelan
+Jurusan di SMK Citra Negara (Update Terbaru):
+1. TJKT (Teknik Jaringan Komputer dan Telekomunikasi)
+2. PPLG (Pengembangan Perangkat Lunak dan Gim) - *dulu RPL*
+3. DKV (Desain Komunikasi Visual) - *dulu Multimedia*
+4. Perhotelan
+5. MPLB (Manajemen Perkantoran dan Layanan Bisnis) - *dulu OTKP*
+6. Pemasaran - *dulu BDP*
 
 Jurusan di SMA Citra Negara:
 - IPA (Ilmu Pengetahuan Alam)

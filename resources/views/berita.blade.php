@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title', 'Berita & Informasi Terkini - Citra Negara')
+@section('meta_description', 'Kumpulan berita terbaru, informasi kegiatan, prestasi, dan acara di lingkungan SMK, SMA, dan SMP Citra Negara. Tetap update dengan perkembangan sekolah.')
+@section('meta_keywords', 'Berita Citra Negara, Informasi Sekolah, Kegiatan Sekolah, Prestasi Siswa, Grand Opening, PPDB, Seminar Pendidikan')
+
 @section('content')
 <section id="all-news" class="relative py-24 px-6 bg-[#f7f7f7] overflow-hidden">
   <div class="absolute inset-0 opacity-20 bg-[url('/images/pattern-light.svg')] bg-repeat"></div>

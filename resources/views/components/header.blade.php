@@ -16,7 +16,7 @@
         <img src="{{ asset('images/logo-cn.png') }}" alt="Citra Negara"
           class="w-11 h-11 object-contain transition-transform duration-300 hover:scale-105" />
         <div class="hidden sm:flex flex-col leading-tight">
-          <span class="font-extrabold text-[#699D15] text-sm lg:text-base">Citra Negara</span>
+          <span class="font-extrabold text-primary text-sm lg:text-base">Citra Negara</span>
           <span class="text-xs text-gray-600">SMP · SMK · SMA Citra Negara</span>
         </div>
       </a>
@@ -27,7 +27,7 @@
 
           <!-- Tentang Kami -->
           <div class="relative" @mouseenter="dropdown = 'tentang'" @mouseleave="dropdown = null">
-            <button class="hover:text-[#699D15] transition-colors duration-300 flex items-center gap-1">
+            <button class="hover:text-primary transition-colors duration-300 flex items-center gap-1">
               Tentang Kami
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -37,15 +37,15 @@
               x-show="dropdown === 'tentang'"
               x-transition
               class="absolute left-0 mt-2 w-48 bg-white border border-gray-100 rounded-xl shadow-md py-2 z-40">
-              <a href="{{ url('/#sejarah') }}" class="block px-4 py-2.5 hover:bg-gray-50 hover:text-[#699D15]">Sejarah</a>
-              <a href="{{ url('/#yayasan') }}" class="block px-4 py-2.5 hover:bg-gray-50 hover:text-[#699D15]">Yayasan</a>
-              <a href="{{ url('/#visi-misi') }}" class="block px-4 py-2.5 hover:bg-gray-50 hover:text-[#699D15]">Visi & Misi</a>
+              <a href="{{ url('/#sejarah') }}" class="block px-4 py-2.5 hover:bg-gray-50 hover:text-primary">Sejarah</a>
+              <a href="{{ url('/#yayasan') }}" class="block px-4 py-2.5 hover:bg-gray-50 hover:text-primary">Yayasan</a>
+              <a href="{{ url('/#visi-misi') }}" class="block px-4 py-2.5 hover:bg-gray-50 hover:text-primary">Visi & Misi</a>
             </div>
           </div>
 
           <!-- Sekolah -->
           <div class="relative" @mouseenter="dropdown = 'sekolah'" @mouseleave="dropdown = null">
-            <button class="hover:text-[#699D15] transition-colors duration-300 flex items-center gap-1">
+            <button class="hover:text-primary transition-colors duration-300 flex items-center gap-1">
               Sekolah
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -60,9 +60,9 @@
             >
               <!-- SMP -->
               <div class="relative group" @mouseenter="subDropdown = 'smp'" @mouseleave="subDropdown = null">
-                <a href="/smp" class="flex justify-between items-center px-4 py-2.5 hover:bg-gray-50 hover:text-[#699D15]">
+                <a href="/smp" class="flex justify-between items-center px-4 py-2.5 hover:bg-gray-50 hover:text-primary">
                   SMP Citra Negara
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-gray-400 group-hover:text-[#699D15]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-gray-400 group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
                 </a>
@@ -73,16 +73,16 @@
                   x-transition
                   class="absolute top-0 left-full ml-1 w-44 bg-white border border-gray-100 rounded-xl shadow-md py-2"
                 >
-                  <a href="/smp" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#699D15]">Beranda</a>
-                  <a href="/smp/spmb" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#699D15]">SPMB</a>
+                  <a href="/smp" class="block px-4 py-2 hover:bg-gray-50 hover:text-primary">Beranda</a>
+                  <a href="/smp/spmb" class="block px-4 py-2 hover:bg-gray-50 hover:text-primary">SPMB</a>
                 </div>
               </div>
 
               <!-- SMK -->
               <div class="relative group" @mouseenter="subDropdown = 'smk'" @mouseleave="subDropdown = null">
-                <a href="/smk" class="flex justify-between items-center px-4 py-2.5 hover:bg-gray-50 hover:text-[#699D15]">
+                <a href="/smk" class="flex justify-between items-center px-4 py-2.5 hover:bg-gray-50 hover:text-primary">
                   SMK Citra Negara
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-gray-400 group-hover:text-[#699D15]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-gray-400 group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
                 </a>
@@ -93,17 +93,17 @@
                   x-transition
                   class="absolute top-0 left-full ml-1 w-44 bg-white border border-gray-100 rounded-xl shadow-md py-2"
                 >
-                  <a href="/smk" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#699D15]">Beranda</a>
-                  <a href="{{ url('/smk/#jurusan') }}" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#699D15]">Jurusan</a>
-                  <a href="/smk/spmb" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#699D15]">SPMB</a>
+                  <a href="/smk" class="block px-4 py-2 hover:bg-gray-50 hover:text-primary">Beranda</a>
+                  <a href="{{ url('/smk/#jurusan') }}" class="block px-4 py-2 hover:bg-gray-50 hover:text-primary">Jurusan</a>
+                  <a href="/smk/spmb" class="block px-4 py-2 hover:bg-gray-50 hover:text-primary">SPMB</a>
                 </div>
               </div>
 
               <!-- SMA -->
               <div class="relative group" @mouseenter="subDropdown = 'sma'" @mouseleave="subDropdown = null">
-                <a href="/sma" class="flex justify-between items-center px-4 py-2.5 hover:bg-gray-50 hover:text-[#699D15]">
+                <a href="/sma" class="flex justify-between items-center px-4 py-2.5 hover:bg-gray-50 hover:text-primary">
                   SMA Citra Negara
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-gray-400 group-hover:text-[#699D15]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-gray-400 group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
                 </a>
@@ -114,21 +114,21 @@
                   x-transition
                   class="absolute top-0 left-full ml-1 w-44 bg-white border border-gray-100 rounded-xl shadow-md py-2"
                 >
-                  <a href="/sma" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#699D15]">Beranda</a>
-                   <a href="{{ url('/sma/#jurusan') }}" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#699D15]">Jurusan</a>
-                  <a href="/sma/spmb" class="block px-4 py-2 hover:bg-gray-50 hover:text-[#699D15]">SPMB</a>
+                  <a href="/sma" class="block px-4 py-2 hover:bg-gray-50 hover:text-primary">Beranda</a>
+                   <a href="{{ url('/sma/#jurusan') }}" class="block px-4 py-2 hover:bg-gray-50 hover:text-primary">Jurusan</a>
+                  <a href="/sma/spmb" class="block px-4 py-2 hover:bg-gray-50 hover:text-primary">SPMB</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <a href="/berita" class="hover:text-[#699D15] transition-colors duration-300">Berita</a>
-          <a href="/kontak" class="hover:text-[#699D15] transition-colors duration-300">Kontak</a>
+          <a href="/berita" class="hover:text-primary transition-colors duration-300">Berita</a>
+          <a href="/kontak" class="hover:text-primary transition-colors duration-300">Kontak</a>
         </nav>
 
         <!-- Tombol Daftar -->
         <a href="/spmb"
-          class="hidden md:inline-block bg-[#699D15] text-white font-semibold px-6 py-2.5 rounded-full 
+          class="hidden md:inline-block bg-primary text-white font-semibold px-6 py-2.5 rounded-full 
           shadow-md hover:shadow-lg hover:bg-[#7FBF1D] active:scale-95 transition-all duration-300 text-sm">
           DAFTAR SPMB
         </a>
@@ -234,7 +234,7 @@
       <a href="/kontak" class="py-2">Kontak</a>
 
       <a href="/spmb"
-        class="mt-3 text-center bg-[#699D15] text-white font-semibold px-5 py-2 rounded-full shadow-md hover:bg-[#7FBF1D] hover:shadow-lg transition-all duration-300">
+        class="mt-3 text-center bg-primary text-white font-semibold px-5 py-2 rounded-full shadow-md hover:bg-[#7FBF1D] hover:shadow-lg transition-all duration-300">
         DAFTAR SPMB
       </a>
     </nav>

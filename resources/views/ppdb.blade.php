@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title', 'Pendaftaran Siswa Baru (PPDB) - Citra Negara')
+@section('meta_description', 'Formulir pendaftaran siswa baru (PPDB) untuk SMK, SMA, dan SMP Citra Negara tahun ajaran 2026/2027. Daftar sekarang dan bergabung dengan sekolah unggulan di Depok.')
+@section('meta_keywords', 'PPDB Citra Negara, Pendaftaran Siswa Baru, PPDB SMK Depok, PPDB SMA Depok, PPDB SMP Depok, Daftar Sekolah Depok, Formulir Pendaftaran')
+
 @section('content')
 <section class="py-16 bg-white">
   <div class="max-w-5xl mx-auto px-4">
