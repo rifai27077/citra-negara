@@ -1,61 +1,288 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🏫 Citra Negara School Website
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Website resmi **Yayasan At-Taqwa Kemiri Jaya - Citra Negara** yang menaungi SMK, SMA, dan SMP Citra Negara di Depok, Jawa Barat.
 
-## About Laravel
+[![Laravel](https://img.shields.io/badge/Laravel-12.x-FF2D20?style=flat&logo=laravel)](https://laravel.com)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.x-38B2AC?style=flat&logo=tailwind-css)](https://tailwindcss.com)
+[![PHP](https://img.shields.io/badge/PHP-8.2+-777BB4?style=flat&logo=php)](https://php.net)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📖 Tentang Proyek
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Website ini merupakan platform informasi terpadu untuk tiga unit pendidikan di bawah Yayasan At-Taqwa Kemiri Jaya:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **SMK Citra Negara** - Sekolah Kejuruan dengan 6 jurusan (TJKT, PPLG, DKV, Perhotelan, MPLB, Pemasaran)
+- **SMA Citra Negara** - Sekolah Menengah Atas dengan jurusan IPA & IPS
+- **SMP Citra Negara** - Sekolah Menengah Pertama dengan program unggulan
 
-## Learning Laravel
+**Lokasi:** Jl. Raya Tanah Baru No.99 Kemiri Jaya, Beji, Depok 16421  
+**Telepon:** (021) 77213470  
+**Website:** [citranegara.sch.id](https://citranegara.sch.id)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## ✨ Fitur Utama
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 🤖 AI Chatbot (Robi)
+- Chatbot berbasis AI menggunakan **Groq API** (Llama 3.1)
+- Menjawab pertanyaan seputar sekolah, jurusan, PPDB, dan fasilitas
+- Rate limiting untuk mencegah spam
+- Session-based chat history
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🎓 Multi-School Landing Pages
+- Halaman terpisah untuk SMK, SMA, dan SMP
+- Informasi lengkap tentang visi-misi, jurusan, prestasi, dan ekstrakurikuler
+- Galeri foto dan video kegiatan sekolah
 
-## Laravel Sponsors
+### 📝 Sistem PPDB (Pendaftaran Siswa Baru)
+- Form pendaftaran online terintegrasi
+- Informasi biaya dan syarat pendaftaran
+- Halaman khusus untuk setiap unit pendidikan
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 📰 Berita & Informasi
+- Artikel berita terkini tentang kegiatan sekolah
+- Template berita yang konsisten dan responsif
 
-### Premium Partners
+### 📞 Kontak & Informasi
+- Halaman kontak dengan informasi lengkap
+- Daftar harga dan biaya pendidikan
+- Informasi yayasan dan struktur organisasi
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 🎨 UI/UX Modern
+- Desain responsif dengan Tailwind CSS 4
+- Animasi smooth menggunakan AOS (Animate On Scroll)
+- Interaktivitas dengan Alpine.js
+- Color scheme konsisten (Primary: #699D15, Secondary: #E9DC00)
 
-## Contributing
+## 🛠️ Tech Stack
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+| Kategori | Teknologi |
+|----------|-----------|
+| **Backend** | Laravel 12.x (PHP 8.2+) |
+| **Frontend** | Blade Templates, Alpine.js |
+| **Styling** | Tailwind CSS 4.x |
+| **Database** | MySQL |
+| **AI/ML** | Groq API (Llama 3.1-8b-instant) |
+| **Animations** | AOS (Animate On Scroll) |
+| **Icons** | Font Awesome 6.5 |
+| **Build Tool** | Vite 7.x |
 
-## Code of Conduct
+## 📦 Instalasi & Setup
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Prerequisites
 
-## Security Vulnerabilities
+Pastikan sistem Anda sudah terinstall:
+- **PHP** >= 8.2
+- **Composer** >= 2.x
+- **Node.js** >= 18.x & npm
+- **MySQL** >= 8.0
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Langkah Instalasi
 
-## License
+1. **Clone Repository**
+   ```bash
+   git clone https://github.com/rifai27077/citra-negara.git
+   cd citra-negara
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+2. **Install Dependencies**
+   ```bash
+   # Install PHP dependencies
+   composer install
+
+   # Install Node.js dependencies
+   npm install
+   ```
+
+3. **Environment Configuration**
+   ```bash
+   # Copy file .env.example ke .env
+   cp .env.example .env
+
+   # Generate application key
+   php artisan key:generate
+   ```
+
+4. **Database Setup**
+   
+   Edit file `.env` dan sesuaikan konfigurasi database:
+   ```env
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=web_cn
+   DB_USERNAME=root
+   DB_PASSWORD=
+   ```
+
+   Jalankan migrasi database:
+   ```bash
+   php artisan migrate
+   ```
+
+5. **Groq API Configuration**
+   
+   Dapatkan API key dari [Groq Console](https://console.groq.com) dan tambahkan ke `.env`:
+   ```env
+   GROQ_API_KEY=your_groq_api_key_here
+   ```
+
+6. **Build Assets**
+   ```bash
+   npm run build
+   ```
+
+7. **Run Development Server**
+   ```bash
+   # Opsi 1: Jalankan semua service sekaligus (server, queue, vite)
+   composer run dev
+
+   # Opsi 2: Jalankan manual
+   php artisan serve
+   npm run dev
+   ```
+
+8. **Akses Website**
+   
+   Buka browser dan akses: `http://localhost:8000`
+
+## 📁 Struktur Proyek
+
+```
+web_cn/
+├── app/
+│   ├── Http/Controllers/
+│   │   ├── ChatbotController.php    # AI Chatbot logic
+│   │   ├── AkademikController.php   # Academic info
+│   │   └── PpdbController.php       # Student registration
+│   └── Models/
+│       ├── Faq.php                  # FAQ model
+│       └── User.php
+├── resources/
+│   └── views/
+│       ├── components/              # Reusable Blade components
+│       │   ├── header.blade.php
+│       │   ├── footer.blade.php
+│       │   ├── chatrobi.blade.php   # Chatbot UI
+│       │   └── ...
+│       ├── smk/                     # SMK pages
+│       ├── sma/                     # SMA pages
+│       ├── smp/                     # SMP pages
+│       ├── berita/                  # News pages
+│       └── landing.blade.php        # Main landing page
+├── routes/
+│   └── web.php                      # All web routes
+├── public/
+│   └── images/                      # Static images
+├── database/
+│   └── migrations/                  # Database migrations
+└── tailwind.config.js               # Tailwind configuration
+```
+
+## 🎯 Fitur Utama per Halaman
+
+### Landing Page (`/`)
+- Hero section dengan informasi yayasan
+- Sejarah dan visi-misi
+- Informasi founder dan pengurus
+- Unit pendidikan (SMK, SMA, SMP)
+- Call-to-action untuk PPDB
+
+### SMK (`/smk`)
+- 6 Jurusan: TJKT, PPLG, DKV, Perhotelan, MPLB, Pemasaran
+- Informasi prestasi dan ekstrakurikuler
+- Daftar harga dan biaya pendidikan
+- Form pendaftaran PPDB
+
+### SMA (`/sma`)
+- 2 Jurusan: IPA dan IPS
+- Informasi akademik dan non-akademik
+- Prestasi siswa
+- Ekstrakurikuler
+
+### SMP (`/smp`)
+- Program unggulan: Web Programming, Tahfidz, Entrepreneurship
+- Fasilitas dan kegiatan
+- Informasi PPDB
+
+### Chatbot (`/chat`)
+- AI-powered chatbot "Robi"
+- Menjawab pertanyaan umum tentang sekolah
+- Rate limiting: 5 request/menit per IP
+
+## 🔧 Konfigurasi
+
+### Tailwind CSS Custom Colors
+
+```javascript
+colors: {
+  primary: {
+    DEFAULT: '#699D15',
+    500: '#699d15',
+    600: '#527e0f',
+    // ... (lihat tailwind.config.js)
+  },
+  secondary: {
+    DEFAULT: '#E9DC00',
+    500: '#e9dc00',
+    // ...
+  }
+}
+```
+
+### Groq API (Chatbot)
+
+Chatbot menggunakan model **Llama 3.1-8b-instant** dari Groq dengan konfigurasi:
+- Temperature: 0.3 (lebih konsisten)
+- Max tokens: 300
+- Rate limit: 5 request/menit
+
+## 🚀 Deployment
+
+### Production Build
+
+```bash
+# Build assets untuk production
+npm run build
+
+# Optimize Laravel
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+```
+
+### Environment Variables (Production)
+
+Pastikan set environment variables berikut di production:
+```env
+APP_ENV=production
+APP_DEBUG=false
+APP_URL=https://your-domain.com
+GROQ_API_KEY=your_production_key
+```
+
+## 🤝 Contributing
+
+Kontribusi sangat diterima! Silakan:
+
+1. Fork repository ini
+2. Buat branch fitur baru (`git checkout -b feature/AmazingFeature`)
+3. Commit perubahan (`git commit -m 'Add some AmazingFeature'`)
+4. Push ke branch (`git push origin feature/AmazingFeature`)
+5. Buat Pull Request
+
+## 📄 License
+
+Proyek ini dilisensikan di bawah [MIT License](https://opensource.org/licenses/MIT).
+
+## 👥 Tim Pengembang
+
+Dikembangkan oleh tim IT Yayasan At-Taqwa Kemiri Jaya.
+
+## 📞 Kontak
+
+- **Website:** [citranegara.sch.id](https://citranegara.sch.id)
+- **Email:** info@citranegara.sch.id
+- **Telepon:** (021) 77213470
+- **Alamat:** Jl. Raya Tanah Baru No.99 Kemiri Jaya, Beji, Depok 16421
+
+---
+
+<p align="center">Made with ❤️ for Citra Negara</p>

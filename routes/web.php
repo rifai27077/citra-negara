@@ -5,100 +5,99 @@ use App\Http\Controllers\ChatbotController;
 use App\Http\Controllers\AkademikController;
 use App\Http\Controllers\PpdbController;
 
-// Halaman utama
+/*
+|--------------------------------------------------------------------------
+| Halaman Utama
+|--------------------------------------------------------------------------
+*/
 Route::get('/', function () {
     return view('landing');
-});
+})->name('landing');
 
-
+/*
+|--------------------------------------------------------------------------
+| Chatbot
+|--------------------------------------------------------------------------
+*/
 Route::get('/chat', function () {
     return view('chatbot');
 });
-
 Route::post('/chatbot', [ChatbotController::class, 'chat']);
-Route::post('/chatbot/reset', [App\Http\Controllers\ChatbotController::class, 'resetChat']);
+Route::post('/chatbot/reset', [ChatbotController::class, 'resetChat']);
 
+/*
+|--------------------------------------------------------------------------
+| Akademik & PPDB Umum
+|--------------------------------------------------------------------------
+*/
 Route::get('/akademik', [AkademikController::class, 'index'])->name('akademik');
 
 Route::get('/spmb', [PpdbController::class, 'index'])->name('ppdb.index');
 Route::post('/ppdb/store', [PpdbController::class, 'store'])->name('ppdb.store');
 
-Route::get('/berita', function () {return view('berita');});
-Route::get('/berita/grand-opening', function () {return view('berita.grand-opening');});
-Route::get('/berita/ppdb-smksma', function () {return view('berita.ppdb-smksma');});
-Route::get('/berita/seminar', function () {return view('berita.seminar');});
-
-route::get('/kontak', function () {return view('kontak-info');})->name('kontak');
-
-route::get('/daftar-harga', function () {return view('daftar-harga');})->name('daftarharga');
-
-// smk
-Route::get('/smk', function () {
-    return view('smk.landing');
+/*
+|--------------------------------------------------------------------------
+| Berita
+|--------------------------------------------------------------------------
+*/
+Route::prefix('berita')->group(function () {
+    Route::get('/', fn() => view('berita'))->name('berita');
+    Route::get('/grand-opening', fn() => view('berita.grand-opening'))->name('berita.grand-opening');
+    Route::get('/ppdb-smksma', fn() => view('berita.ppdb-smksma'))->name('berita.ppdb-smksma');
+    Route::get('/seminar', fn() => view('berita.seminar'))->name('berita.seminar');
 });
 
+/*
+|--------------------------------------------------------------------------
+| Halaman Umum
+|--------------------------------------------------------------------------
+*/
+Route::get('/kontak', fn() => view('kontak-info'))->name('kontak');
+Route::get('/daftar-harga', fn() => view('daftar-harga'))->name('daftar-harga');
 
-Route::get('/smk/jurusan/{nama}', function ($nama) {
-    return view('smk.jurusan.' . strtolower($nama));
+/*
+|--------------------------------------------------------------------------
+| SMK
+|--------------------------------------------------------------------------
+*/
+Route::prefix('smk')->group(function () {
+    Route::get('/', fn() => view('smk.landing'))->name('smk.index');
+
+    Route::get('/jurusan/{nama}', fn($nama) => view('smk.jurusan.' . strtolower($nama)))->name('smk.jurusan');
+    Route::get('/sejarah', fn() => view('smk.sejarah'))->name('smk.sejarah');
+    Route::get('/yayasan', fn() => view('smk.yayasan'))->name('smk.yayasan');
+    Route::get('/sekolah', fn() => view('smk.sekolah'))->name('smk.sekolah');
+    Route::get('/prestasi', fn() => view('smk.prestasi'))->name('smk.prestasi');
+    Route::get('/ekstrakurikuler', fn() => view('smk.ekstrakurikuler'))->name('smk.ekstrakurikuler');
+    Route::get('/spmb', fn() => view('smk.spmb'))->name('smk.spmb');
+
+    Route::post('/ppdb/store', [PpdbController::class, 'store'])->name('smk.ppdb.store');
+    Route::get('/daftar-harga', fn() => view('smk.daftar-harga'))->name('smk.daftar-harga');
 });
 
-Route::get('/smk/sejarah', function () {
-    return view('smk.sejarah');
+/*
+|--------------------------------------------------------------------------
+| SMP
+|--------------------------------------------------------------------------
+*/
+Route::prefix('smp')->group(function () {
+    Route::get('/', fn() => view('smp.landing'))->name('smp.index');
+    Route::get('/spmb', fn() => view('smp.spmb'))->name('smp.spmb');
+
+    Route::post('/ppdb/store', [PpdbController::class, 'store'])->name('smp.ppdb.store');
+    Route::get('/daftar-harga', fn() => view('smp.daftar-harga'))->name('smp.daftar-harga');
 });
 
-Route::get('/smk/yayasan', function () {
-    return view('smk.yayasan');
+/*
+|--------------------------------------------------------------------------
+| SMA
+|--------------------------------------------------------------------------
+*/
+Route::prefix('sma')->group(function () {
+    Route::get('/', fn() => view('sma.landing'))->name('sma.index');
+    Route::get('/jurusan/{nama}', fn($nama) => view('sma.jurusan.' . strtolower($nama)))->name('sma.jurusan');
+    Route::get('/spmb', fn() => view('sma.spmb'))->name('sma.spmb');
+
+    Route::post('/ppdb/store', [PpdbController::class, 'store'])->name('sma.ppdb.store');
+    Route::get('/daftar-harga', fn() => view('sma.daftar-harga'))->name('sma.daftar-harga');
 });
-
-Route::get('/smk/sekolah', function () {
-    return view('smk.sekolah');
-});
-
-Route::get('/smk/prestasi', function () {
-    return view('smk.prestasi');
-});
-
-Route::get('/smk/ekstrakurikuler', function () {
-    return view('smk.ekstrakurikuler');
-});
-
-Route::get('/smk/spmb', function () {
-    return view('smk.spmb');
-
-});Route::post('/ppdb/store', [PpdbController::class, 'store'])->name('ppdb.store');
-
-route::get('/smk/daftar-harga', function () {return view('smk.daftar-harga');})->name('daftar-harga');
-
-// smp
-Route::get('/smp', function () {
-    return view('smp.landing');
-});
-
-Route::get('/smp/spmb', function () {
-    return view('smp.spmb');
-});
-
-Route::post('/smp/ppdb/store', [PpdbController::class, 'store'])->name('smp.ppdb.store');
-
-route::get('/smp/daftar-harga', function () {
-    return view('smp.daftar-harga');
-})->name('daftar-harga');
-
-// sma
-Route::get('/sma', function () {
-    return view('sma.landing');
-});
-
-Route::get('/sma/jurusan/{nama}', function ($nama) {
-    return view('sma.jurusan.' . strtolower($nama));
-});
-
-Route::get('/sma/spmb', function () {
-    return view('sma.spmb');
-});
-
-Route::post('/sma/ppdb/store', [PpdbController::class, 'store'])->name('smp.ppdb.store');
-
-route::get('/sma/daftar-harga', function () {
-    return view('sma.daftar-harga');
-})->name('daftar-harga');

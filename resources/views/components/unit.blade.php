@@ -1,10 +1,10 @@
 <section class="relative py-20 px-6 bg-gradient-to-b from-[#F5F6F7] to-white overflow-hidden" id="sekolah" data-aos="fade-up" data-aos-duration="1000">
   <!-- Dekorasi -->
   <div class="absolute -top-10 -right-10 w-64 h-64 bg-[#8DC63F]/10 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-0 left-0 w-72 h-72 bg-[#7CB518]/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
 
   <div class="max-w-7xl mx-auto text-center relative z-10">
-    <h2 class="text-3xl md:text-4xl font-extrabold text-[#7CB518] mb-3">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-primary mb-3">
       Jelajahi Unit Pendidikan Kami
     </h2>
     <p class="text-base md:text-lg text-gray-600 mb-14">
@@ -30,7 +30,7 @@
             <div class="p-6 flex flex-col items-center space-y-3 bg-white rounded-b-3xl">
               <h3 class="text-2xl font-extrabold text-gray-700">{{ $unit['title'] }}</h3>
               <p class="text-gray-600 text-sm text-center">{{ $unit['desc'] }}</p>
-              <a href="{{ $unit['link'] }}" class="mt-4 text-white font-semibold px-8 py-2 rounded-full shadow-md hover:shadow-lg transition hover:opacity-90 bg-[#7CB518]">
+              <a href="{{ $unit['link'] }}" class="mt-4 text-white font-semibold px-8 py-2 rounded-full shadow-md hover:shadow-lg transition hover:opacity-90 bg-primary">
                 Lihat Selengkapnya
               </a>
             </div>

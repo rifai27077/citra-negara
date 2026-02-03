@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title', 'Hubungi Kami - Kontak Citra Negara')
+@section('meta_description', 'Hubungi Citra Negara untuk informasi lebih lanjut. Alamat: Jl. Raya Tanah Baru No.99 Kemiri Jaya, Depok. Telepon: (021) 77201052. Email: info@citranegara.sch.id')
+@section('meta_keywords', 'Kontak Citra Negara, Alamat Sekolah, Telepon Sekolah, Email Sekolah, Lokasi Citra Negara, Hubungi Kami')
+
 @section('content')
 
 <section id="kontak" class="bg-[#f7f7f7] min-h-[600px] py-16 px-6">

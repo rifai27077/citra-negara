@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title', 'Kalender Akademik - Citra Negara')
+@section('meta_description', 'Kalender akademik SMK, SMA, dan SMP Citra Negara. Lihat jadwal kegiatan, MPLS, LDKS, dan event penting lainnya sepanjang tahun ajaran.')
+@section('meta_keywords', 'Kalender Akademik, Jadwal Kegiatan Sekolah, MPLS, LDKS, Event Sekolah, Citra Negara')
+
 @section('content')
 <section class="py-16 bg-white mt-10">
     <div class="max-w-5xl mx-auto px-4">
