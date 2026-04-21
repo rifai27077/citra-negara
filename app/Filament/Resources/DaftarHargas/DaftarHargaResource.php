@@ -18,7 +18,11 @@ class DaftarHargaResource extends Resource
 {
     protected static ?string $model = DaftarHarga::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-banknotes';
+
+    protected static ?string $navigationLabel = 'Daftar Harga';
+    protected static ?string $pluralModelLabel = 'Daftar Harga';
+    protected static ?string $modelLabel = 'Daftar Harga';
 
     protected static ?string $recordTitleAttribute = 'title';
 

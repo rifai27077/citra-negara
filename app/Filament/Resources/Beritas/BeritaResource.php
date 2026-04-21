@@ -18,7 +18,11 @@ class BeritaResource extends Resource
 {
     protected static ?string $model = Berita::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-newspaper';
+
+    protected static ?string $navigationLabel = 'Berita';
+    protected static ?string $pluralModelLabel = 'Berita';
+    protected static ?string $modelLabel = 'Berita';
 
     protected static ?string $recordTitleAttribute = 'title';
 
