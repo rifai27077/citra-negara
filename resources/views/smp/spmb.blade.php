@@ -57,7 +57,7 @@
 
           <div>
             <label class="block text-gray-700 font-medium mb-2">Jenis Kelamin</label>
-            <select name="jurusan" class="appearance-none w-full border border-gray-300 rounded-full px-4 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-[#7CB518] bg-white" style="background-image: linear-gradient(45deg, transparent 50%, #000000ff 50%), linear-gradient(135deg, #000000ff 50%, transparent 50%); background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px); background-size: 5px 5px, 5px 5px; background-repeat: no-repeat;" required>
+            <select name="jenis_kelamin" class="appearance-none w-full border border-gray-300 rounded-full px-4 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-[#7CB518] bg-white" style="background-image: linear-gradient(45deg, transparent 50%, #000000ff 50%), linear-gradient(135deg, #000000ff 50%, transparent 50%); background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px); background-size: 5px 5px, 5px 5px; background-repeat: no-repeat;" required>
               <option value="">-- Pilih --</option>
               <option value="Laki-laki">Laki-laki</option>
               <option value="Perempuan">Perempuan</option>

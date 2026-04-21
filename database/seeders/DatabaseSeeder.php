@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        // Panggil FaqSeeder
-        $this->call(FaqSeeder::class);
+        // Panggil FaqSeeder (dinonaktifkan karena App\Models\Faq sudah tidak ada)
+        // $this->call(FaqSeeder::class);
     }
 }
