@@ -3,34 +3,13 @@
   id="hero"
   class="relative h-[90vh] w-full overflow-hidden flex items-center justify-center bg-black"
 >
-  <!-- Parallax Background -->
-  <!-- Hero Background -->
-<div id="hero-bg" class="absolute inset-0 bg-cover bg-center will-change-transform">
-  <video 
-    id="hero-video" 
-    autoplay 
-    loop 
-    muted 
-    playsinline 
-    preload="auto" 
-    poster="/images/hero-thumb.jpg" 
-    class="w-full h-full object-cover object-center"
+  <!-- Hero Background Image -->
+  <div 
+    id="hero-bg" 
+    class="absolute inset-0 bg-cover bg-center will-change-transform scale-110"
+    style="background-image: url('{{ asset('images/hero-cn.png') }}');"
   >
-    <source src="{{ asset('videos/citra-negara.mp4') }}" type="video/mp4">
-  </video>
-</div>
-
-<!-- Tombol Audio -->
-<button 
-  id="audioToggleBtn" 
-  class="absolute bottom-6 right-6 z-[40] flex items-center gap-2
-        bg-white/60 backdrop-blur-md text-primary font-semibold 
-        px-5 py-2.5 rounded-full shadow-lg border border-white/40
-        hover:bg-[#7CB518] hover:text-white hover:shadow-[0_0_20px_rgba(124,181,24,0.6)]
-        transition-all duration-300 active:scale-95"
->
-  <i class="fa-solid fa-volume-xmark"></i> Aktifkan Audio
-</button>
+  </div>
 
   <!-- Gradient Overlay -->
   <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-accent/10"></div>
@@ -87,11 +66,6 @@
   0% { opacity: 0; transform: translateY(50px); }
   100% { opacity: 1; transform: translateY(0); }
 }
-
-#audioToggleBtn {
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
 </style>
 @endpush
 
@@ -100,32 +74,13 @@
   // PARALLAX
   window.addEventListener('scroll', () => {
       const bg = document.getElementById('hero-bg');
-      const btn = document.getElementById('audioToggleBtn');
-
-      if (!bg || !btn) return;
+      if (!bg) return;
 
       const scrollY = window.scrollY;
       const speed = 0.4;
+      // Mempertahankan scale 1.1 dasar + efek parallax
       bg.style.transform = `translateY(${scrollY * speed}px) scale(1.1)`;
-
-      // Logic Fade dihapus agar tombol ikut scroll ke atas (posisi absolute)
-  });
-
-  // AUDIO
-  const video = document.getElementById('hero-video');
-  const btn = document.getElementById('audioToggleBtn');
-
-  btn.addEventListener('click', () => {
-    video.muted = !video.muted;
-    video.play();
-
-    if (video.muted) {
-      btn.innerHTML = `<i class="fa-solid fa-volume-xmark"></i> Aktifkan Audio`;
-    } else {
-      btn.innerHTML = `<i class="fa-solid fa-volume-high"></i> Matikan Audio`;
-    }
   });
 </script>
-
 @endpush
 

@@ -1,11 +1,12 @@
 <section 
   class="relative h-[95vh] min-h-[600px] w-full flex items-center justify-center bg-[url('/images/hero-fallback.jpg')] bg-cover bg-center">  
   <div class="absolute inset-0 w-full h-full z-0">
-    <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/60"></div>
-    <video autoplay loop muted playsinline preload="none" poster="/images/thumb.webp" class="w-full h-full object-cover object-center">
-      <source src="{{ asset('videos/smk.mp4') }}" type="video/mp4">
-    </video>
-    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/60 z-10"></div>
+    <div 
+      class="w-full h-full bg-cover bg-center"
+      style="background-image: url('{{ asset('images/smk/u-smk2.png') }}');"
+    ></div>
+    <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
   </div>
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 flex flex-col items-center justify-center min-h-[400px]" style="min-height:400px;">
     <div class="w-full md:w-2/3 mx-auto text-center" data-aos="zoom-in" data-aos-delay="50">
