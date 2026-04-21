@@ -25,14 +25,36 @@ class PpdbController extends Controller
             'alamat' => 'required|string',
             'sekolah_asal' => 'required|string|max:100',
             'alamat_sekolah' => 'required|string',
-            'jurusan' => 'required|string',
+            'jurusan' => 'nullable|string',
+            'jurusan_smk' => 'nullable|string',
+            'unit_pendidikan' => 'nullable|string',
         ]);
 
-        // Contoh: nanti kamu bisa simpan ke database di sini
-        // Misal: Ppdb::create($request->all());
+        $jenjang = "smk";
+        if ($request->has('unit_pendidikan')) {
+            $jenjang = strtolower($request->unit_pendidikan);
+        }
 
-        // Setelah disimpan, arahkan ke halaman sukses
-        return redirect()->route('ppdb.success')->with('success', 'Pendaftaran berhasil!');
+        // if form used 'jurusan' (from smk/sma/smp spmb) it will use it.
+        // if form used 'jurusan_smk' (from main ppdb form) it will use it.
+        $jurusan = $request->jurusan ?? $request->jurusan_smk ?? null;
+
+        \App\Models\PpdbRegistration::create([
+            'nama_lengkap' => $request->nama,
+            'nisn' => $request->nisn,
+            'tempat_lahir' => $request->tempat_lahir,
+            'tanggal_lahir' => $request->tanggal_lahir,
+            'jenis_kelamin' => ($request->jenis_kelamin == 'Laki-laki' || $request->jenis_kelamin == 'L') ? 'L' : 'P',
+            'alamat' => $request->alamat,
+            'sekolah_asal' => $request->sekolah_asal,
+            'alamat_sekolah' => $request->alamat_sekolah,
+            'jenjang' => $jenjang,
+            'jurusan' => $jurusan,
+            'status' => 'pending',
+            'catatan' => null
+        ]);
+
+        return back()->with('success', 'Pendaftaran berhasil!');
     }
 
     // Halaman sukses

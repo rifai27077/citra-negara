@@ -11,7 +11,7 @@
 
   <div class="max-w-7xl mx-auto relative z-10">
     @php
-        $ekskul = \App\Models\Ekstrakurikuler::where('category', 'SMK')->paginate(9);
+        $ekskul = $eskuls ?? collect();
     @endphp
 
     <!-- Breadcrumbs -->
@@ -74,9 +74,11 @@
     </div>
 
     <!-- Pagination -->
+    @if(method_exists($ekskul, 'links'))
     <div class="mt-12 flex justify-center">
         {{ $ekskul->links() }}
     </div>
+    @endif
 
     <!-- Tombol Kembali -->
     <div class="text-center mt-16">

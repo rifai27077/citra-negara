@@ -11,52 +11,44 @@
 
   <!-- Carousel Container -->
   <div class="relative max-w-[95vw] md:max-w-[90vw] mx-auto">
+    @php
+      $prestasis = \App\Models\Prestasi::where('category', 'SMK')->latest('date')->take(6)->get();
+    @endphp
+
     <div class="scroll-track flex gap-6 md:gap-10">
       <!-- Loop utama -->
       <div class="scroll-group flex gap-6 md:gap-10">
-        @foreach ([
-          ['file' => 'p1.png', 'judul' => 'Juara 1 Tim Futsal', 'desc' => 'PESOET CUP Sejabodetabek 2025'],
-          ['file' => 'p2.png', 'judul' => 'Juara 1 Taekwondo Putra', 'desc' => 'Tingkat Nasional'],
-          ['file' => 'p3.png', 'judul' => 'Juara Utama 2', 'desc' => 'PBB, LKBB & Kostum Catabrasta Se-Pulau Jawa'],
-          ['file' => 'p4.jpg', 'judul' => 'Juara 1 Pencak Silat', 'desc' => 'Tingkat Nasional'],
-          ['file' => 'p5.jpg', 'judul' => 'Juara 1 Basket Putri', 'desc' => 'Haraki Cup 2025 SLTA Se-Jabodetabek'],
-          ['file' => 'p6.jpg', 'judul' => 'Juara 1 Tim Futsal', 'desc' => 'Futsal Primer Student League']
-        ] as $item)
+        @forelse ($prestasis as $item)
           <div class="flex-shrink-0 w-[75vw] sm:w-[60vw] md:w-[398px] bg-white rounded-2xl shadow-md border border-gray-100 transition-all duration-300">
             <img 
-              src="{{ asset('/images/smk/' . $item['file']) }}" 
-              alt="{{ $item['judul'] }}"
+              src="{{ $item->image ? asset('storage/' . $item->image) : asset('/images/placeholder.jpg') }}" 
+              alt="{{ $item->title }}"
               loading="lazy" decoding="async"
               class="w-full h-[300px] sm:h-[400px] md:h-[497px] object-cover rounded-t-2xl"
             />
             <div class="p-4 md:p-5 text-center">
-              <p class="text-base md:text-lg font-semibold text-gray-800">{{ $item['judul'] }}</p>
-              <p class="text-xs md:text-sm text-gray-500 mt-1">{{ $item['desc'] }}</p>
+              <p class="text-base md:text-lg font-semibold text-gray-800">{{ $item->title }}</p>
+              <p class="text-xs md:text-sm text-gray-500 mt-1">{!! strip_tags($item->description) !!}</p>
             </div>
           </div>
-        @endforeach
+        @empty
+          <div class="p-10 text-gray-500">Belum ada data prestasi.</div>
+        @endforelse
       </div>
 
       <!-- Duplikat agar loop tanpa putus -->
       <div class="scroll-group flex gap-6 md:gap-10">
-        @foreach ([
-          ['file' => 'p1.png', 'judul' => 'Juara 1 Tim futsal', 'desc' => 'PESOET CUP Sejabodetabek 2025'],
-          ['file' => 'p2.png', 'judul' => 'Juara 1 Taekwondo putra', 'desc' => 'Tingkat Nasional'],
-          ['file' => 'p3.png', 'judul' => 'Juara Utama 2', 'desc' => 'PBB, LKBB & Kostum Catabrasta Se-Pulau Jawa'],
-          ['file' => 'p4.jpg', 'judul' => 'Juara 1 Pencak Silat', 'desc' => 'Tingkat Nasional'],
-          ['file' => 'p5.jpg', 'judul' => 'Juara 1 Basket Putri', 'desc' => 'Haraki Cup 2025 SLTA Se-Jabodetabek'],
-          ['file' => 'p6.jpg', 'judul' => 'Juara 1 Tim Futsal', 'desc' => 'Futsal Primer Student League']
-        ] as $item)
+        @foreach ($prestasis as $item)
           <div class="flex-shrink-0 w-[75vw] sm:w-[60vw] md:w-[398px] bg-white rounded-2xl shadow-md border border-gray-100 transition-all duration-300">
             <img 
-              src="{{ asset('/images/smk/' . $item['file']) }}" 
-              alt="{{ $item['judul'] }}"
+               src="{{ $item->image ? asset('storage/' . $item->image) : asset('/images/placeholder.jpg') }}" 
+              alt="{{ $item->title }}"
               loading="lazy" decoding="async"
               class="w-full h-[300px] sm:h-[400px] md:h-[497px] object-cover rounded-t-2xl"
             />
             <div class="p-4 md:p-5 text-center">
-              <p class="text-base md:text-lg font-semibold text-gray-800">{{ $item['judul'] }}</p>
-              <p class="text-xs md:text-sm text-gray-500 mt-1">{{ $item['desc'] }}</p>
+               <p class="text-base md:text-lg font-semibold text-gray-800">{{ $item->title }}</p>
+              <p class="text-xs md:text-sm text-gray-500 mt-1">{!! strip_tags($item->description) !!}</p>
             </div>
           </div>
         @endforeach

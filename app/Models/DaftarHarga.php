@@ -11,6 +11,7 @@ class DaftarHarga extends Model
 
     protected $fillable = [
         'title',
+        'price',
         'pendaftaran',
         'daftar_ulang',
         'total',

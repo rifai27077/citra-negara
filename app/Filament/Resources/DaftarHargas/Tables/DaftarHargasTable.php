@@ -5,6 +5,8 @@ namespace App\Filament\Resources\DaftarHargas\Tables;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 
 class DaftarHargasTable
@@ -13,35 +15,41 @@ class DaftarHargasTable
     {
         return $table
             ->columns([
-                \Filament\Tables\Columns\TextColumn::make('title')
+                TextColumn::make('title')
                     ->searchable(),
-                \Filament\Tables\Columns\TextColumn::make('pendaftaran')
-                    ->money('IDR')
+                TextColumn::make('price')
+                    ->money()
                     ->sortable(),
-                \Filament\Tables\Columns\TextColumn::make('daftar_ulang')
-                    ->money('IDR')
+                TextColumn::make('pendaftaran')
+                    ->numeric()
                     ->sortable(),
-                \Filament\Tables\Columns\TextColumn::make('total')
-                    ->money('IDR')
+                TextColumn::make('daftar_ulang')
+                    ->numeric()
                     ->sortable(),
-                \Filament\Tables\Columns\TextColumn::make('spp')
-                    ->money('IDR')
+                TextColumn::make('total')
+                    ->numeric()
                     ->sortable(),
-                \Filament\Tables\Columns\TextColumn::make('category')
-                    ->badge()
-                    ->color(fn (string $state): string => match ($state) {
-                        'SMA' => 'info',
-                        'SMP' => 'warning',
-                        'SMK' => 'success',
-                        default => 'gray',
-                    }),
-                \Filament\Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('spp')
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('category')
+                    ->searchable(),
+                TextColumn::make('created_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
+                SelectFilter::make('category')
+                    ->options([
+                        'SMA' => 'SMA',
+                        'SMP' => 'SMP',
+                        'SMK' => 'SMK',
+                    ]),
             ])
             ->recordActions([
                 EditAction::make(),

@@ -18,7 +18,7 @@ class DaftarHargaResource extends Resource
 {
     protected static ?string $model = DaftarHarga::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBanknotes;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     protected static ?string $recordTitleAttribute = 'title';
 

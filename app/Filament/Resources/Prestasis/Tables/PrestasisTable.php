@@ -5,6 +5,9 @@ namespace App\Filament\Resources\Prestasis\Tables;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 
 class PrestasisTable
@@ -13,29 +16,32 @@ class PrestasisTable
     {
         return $table
             ->columns([
-                \Filament\Tables\Columns\ImageColumn::make('image'),
-                \Filament\Tables\Columns\TextColumn::make('title')
+                TextColumn::make('title')
                     ->searchable(),
-                \Filament\Tables\Columns\TextColumn::make('slug')
+                TextColumn::make('slug')
                     ->searchable(),
-                \Filament\Tables\Columns\TextColumn::make('category')
-                    ->badge()
-                    ->color(fn (string $state): string => match ($state) {
-                        'SMA' => 'info',
-                        'SMP' => 'warning',
-                        'SMK' => 'success',
-                        default => 'gray',
-                    }),
-                \Filament\Tables\Columns\TextColumn::make('date')
+                TextColumn::make('date')
                     ->date()
                     ->sortable(),
-                \Filament\Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('category')
+                    ->searchable(),
+                ImageColumn::make('image'),
+                TextColumn::make('created_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
+                SelectFilter::make('category')
+                    ->options([
+                        'SMA' => 'SMA',
+                        'SMP' => 'SMP',
+                        'SMK' => 'SMK',
+                    ]),
             ])
             ->recordActions([
                 EditAction::make(),

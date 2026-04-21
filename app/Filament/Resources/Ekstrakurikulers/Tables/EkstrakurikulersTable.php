@@ -1,29 +1,28 @@
 <?php
 
-namespace App\Filament\Resources\Beritas\Tables;
+namespace App\Filament\Resources\Ekstrakurikulers\Tables;
 
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Tables\Columns\ImageColumn;
-use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Filament\Tables\Filters\SelectFilter;
 
-class BeritasTable
+class EkstrakurikulersTable
 {
     public static function configure(Table $table): Table
     {
         return $table
             ->columns([
-                ImageColumn::make('image'),
-                TextColumn::make('title')
+                TextColumn::make('name')
                     ->searchable(),
-                IconColumn::make('is_published')
-                    ->boolean(),
-                TextColumn::make('published_at')
-                    ->dateTime()
-                    ->sortable(),
+                TextColumn::make('slug')
+                    ->searchable(),
+                ImageColumn::make('image'),
+                TextColumn::make('category')
+                    ->badge(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -34,7 +33,12 @@ class BeritasTable
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
+                SelectFilter::make('category')
+                    ->options([
+                        'SMA' => 'SMA',
+                        'SMP' => 'SMP',
+                        'SMK' => 'SMK',
+                    ]),
             ])
             ->recordActions([
                 EditAction::make(),

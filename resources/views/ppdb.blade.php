@@ -111,7 +111,7 @@
   </div>
 
   {{-- Popup Sukses --}}
-  <div id="successPopup" class="fixed inset-0 flex items-center justify-center bg-black/50 hidden z-50">
+  <div id="successPopup" class="fixed inset-0 flex items-center justify-center bg-black/50 {{ session('success') ? '' : 'hidden' }} z-[100]">
     <div class="bg-white rounded-2xl shadow-xl p-8 text-center max-w-sm mx-auto">
       <h2 class="text-2xl font-bold text-[#7CB518] mb-3">Pendaftaran Berhasil 🎉</h2>
       <p class="text-gray-700 mb-6">Terima kasih telah mengisi formulir PPDB.<br>Kami akan segera memproses data kamu!</p>
@@ -161,15 +161,7 @@
     }
   });
 
-  // Popup sukses
-  document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    document.getElementById("successPopup").classList.remove("hidden");
-    this.reset();
-    opsiTambahan.innerHTML = '';
-    opsiTambahan.classList.add('hidden');
-  });
-
+  // tombol untuk menutup popup
   document.getElementById("closePopup").addEventListener("click", function() {
     document.getElementById("successPopup").classList.add("hidden");
   });

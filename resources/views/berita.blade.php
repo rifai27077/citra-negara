@@ -23,28 +23,40 @@
     </div>
 
     <!-- Daftar Semua Berita -->
-    @php
-      $news = [
-        ['img' => '/images/berita1.png', 'title' => 'Grand Opening SMK Citra Negara 2025', 'date' => '25 Agustus 2025', 'link' => '/berita/grand-opening'],
-        ['img' => '/images/berita2.jpg', 'title' => 'PPDB SMK-SMA Citra Negara', 'date' => '1 September 2025', 'desc' => '', 'link' => '/berita/ppdb-smksma'],
-        ['img' => '/images/berita3.jpg', 'title' => 'Seminar', 'date' => '12 Agustus 2025', 'desc' => '', 'link' => '/berita/seminar'],
-      ];
-    @endphp
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10" data-aos="fade-in" data-aos-delay="200">
-      @foreach ($news as $item)
-        <div class="group relative rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-700">
-          <img src="{{ $item['img'] }}" alt="{{ $item['title'] }}" class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent opacity-70 group-hover:opacity-90 transition"></div>
-          <div class="absolute bottom-0 p-5 text-white">
-            <p class="text-sm opacity-80">{{ $item['date'] }}</p>
-            <h4 class="font-bold text-lg mb-2">{{ $item['title'] }}</h4>
-            <a href="{{ $item['link'] }}" class="inline-block bg-[#699D15] hover:bg-[#7CB518] text-white px-4 py-1.5 rounded-full text-sm font-semibold shadow transition-all duration-300">
-              Selengkapnya
-            </a>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      @foreach($beritas as $item)
+      <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full border border-gray-100">
+        <div class="relative h-48 overflow-hidden group">
+          <img 
+            src="{{ $item->image ? asset('storage/' . $item->image) : asset('img/placeholder.jpg') }}" 
+            alt="{{ $item->title }}" 
+            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+          >
+          <div class="absolute top-4 right-4 bg-[#7CB518] text-white px-3 py-1 rounded-full text-xs font-bold shadow-md">
+            {{ $item->published_at ? $item->published_at->format('d M Y') : $item->created_at->format('d M Y') }}
           </div>
         </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-xl font-bold text-gray-800 mb-3 line-clamp-2 hover:text-[#7CB518] transition-colors break-words">
+            <a href="{{ route('berita.show', $item->slug) }}">
+              {{ $item->title }}
+            </a>
+          </h3>
+          <div class="text-gray-600 mb-4 line-clamp-3 text-sm flex-grow break-words">
+            {!! Str::limit(strip_tags($item->content), 100) !!}
+          </div>
+          <a href="{{ route('berita.show', $item->slug) }}" class="inline-flex items-center text-[#7CB518] font-semibold tracking-wide hover:underline mt-auto group">
+            Baca Selengkapnya
+            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
+        </div>
+      </div>
       @endforeach
+    </div>
+
+    <!-- Pagination -->
+    <div class="mt-12">
+      {{ $beritas->links() }}
     </div>
 
     <!-- Tombol Kembali -->
