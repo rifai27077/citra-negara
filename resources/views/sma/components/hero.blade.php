@@ -2,7 +2,7 @@
   class="relative h-[95vh] min-h-[600px] w-full flex items-center justify-center bg-[url('/images/hero-fallback.jpg')] bg-cover bg-center">  
   <div class="absolute inset-0 w-full h-full z-0">
     <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/60"></div>
-    <video autoplay loop muted playsinline preload="none" poster="/images/thumb.webp" class="w-full h-full object-cover object-center">
+    <video autoplay loop muted playsinline preload="auto" poster="/images/thumb.webp" class="w-full h-full object-cover object-center">
       <source src="{{ asset('videos/sma.mp4') }}" type="video/mp4">
     </video>
     <div class="absolute inset-0 bg-black bg-opacity-40"></div>

@@ -12,7 +12,7 @@
     loop 
     muted 
     playsinline 
-    preload="none" 
+    preload="auto" 
     poster="/images/hero-thumb.jpg" 
     class="w-full h-full object-cover object-center"
   >

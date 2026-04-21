@@ -21,5 +21,15 @@ class DatabaseSeeder extends Seeder
 
         // Panggil FaqSeeder (dinonaktifkan karena App\Models\Faq sudah tidak ada)
         // $this->call(FaqSeeder::class);
+
+        // Membuat akun admin bawaan agar panel admin bisa diakses
+        User::updateOrCreate(
+            ['email' => 'admin@admin.com'],
+            [
+                'name' => 'Administrator',
+                'password' => bcrypt('password'),
+                'role' => 'admin',
+            ]
+        );
     }
 }
