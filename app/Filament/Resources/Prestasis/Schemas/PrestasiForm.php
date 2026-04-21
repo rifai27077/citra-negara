@@ -31,7 +31,9 @@ class PrestasiForm
                         'SMK' => 'SMK',
                     ])
                     ->required(),
-                FileUpload::make('image'),
+                FileUpload::make('image')
+                    ->image()
+                    ->directory('prestasi'),
             ]);
     }
 }

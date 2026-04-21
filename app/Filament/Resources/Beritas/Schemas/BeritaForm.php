@@ -24,7 +24,9 @@ class BeritaForm
                 RichEditor::make('content')
                     ->required()
                     ->columnSpanFull(),
-                FileUpload::make('image'),
+                FileUpload::make('image')
+                    ->image()
+                    ->directory('berita'),
                 Toggle::make('is_published')
                     ->required(),
                 DateTimePicker::make('published_at'),
