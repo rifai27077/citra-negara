@@ -3,13 +3,13 @@
   id="hero"
   class="relative h-[90vh] w-full overflow-hidden flex items-center justify-center bg-black"
 >
-  <!-- Hero Background Image -->
-  <div 
-    id="hero-bg" 
-    class="absolute inset-0 bg-cover bg-center will-change-transform scale-110"
-    style="background-image: url('{{ asset('images/hero-cn.png') }}');"
-  >
-  </div>
+  <!-- Hero Background Video -->
+  <x-vimeo-background
+    id="hero-bg"
+    class="will-change-transform scale-110"
+    video-id="1185434801"
+    fallback-image="images/hero-cn.png"
+  />
 
   <!-- Gradient Overlay -->
   <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-accent/10"></div>
@@ -83,4 +83,3 @@
   });
 </script>
 @endpush
-

@@ -34,6 +34,10 @@
     
     {{-- Favicon --}}
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="preconnect" href="https://player.vimeo.com">
+    <link rel="preconnect" href="https://i.vimeocdn.com" crossorigin>
+    <link rel="dns-prefetch" href="//player.vimeo.com">
+    <link rel="dns-prefetch" href="//i.vimeocdn.com">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -134,6 +138,8 @@
             }
         }
     </style>
+
+    @stack('styles')
 </head>
 
 <body class="flex flex-col min-h-screen bg-gray-50 text-gray-800 overflow-x-hidden antialiased">

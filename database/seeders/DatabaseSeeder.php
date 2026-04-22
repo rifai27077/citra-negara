@@ -31,5 +31,10 @@ class DatabaseSeeder extends Seeder
                 'role' => 'admin',
             ]
         );
+
+        // Panggil seeder lainnya
+        $this->call([
+            DaftarHargaSeeder::class,
+        ]);
     }
 }

@@ -15,12 +15,13 @@ class DaftarHargaController extends Controller
             ->get()
             ->groupBy('category');
 
-        return view('daftar-harga', compact('daftarHargas'));
+        return view('daftar-harga-all', compact('daftarHargas'));
     }
 
-    public function showCategory($category)
+    public function showCategory(Request $request)
     {
-        // Fetch prices for a specific category
+        // Get category from route defaults or request
+        $category = $request->route()->defaults['category'] ?? 'smk';
         $categoryName = strtoupper($category);
         $prices = DaftarHarga::where('category', $categoryName)
             ->orderBy('title')
