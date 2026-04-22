@@ -274,7 +274,8 @@ Proyek ini dilisensikan di bawah [MIT License](https://opensource.org/licenses/M
 
 ## 👥 Tim Pengembang
 
-Dikembangkan oleh tim IT Yayasan At-Taqwa Kemiri Jaya.
+- 👨‍💻 Dev 1 — https://github.com/rifai27077
+- 👨‍💻 Dev 2 — https://github.com/Frinzkaaa
 
 ## 📞 Kontak
 

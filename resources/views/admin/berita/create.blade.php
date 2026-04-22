@@ -24,15 +24,15 @@
             <div class="space-y-6">
                 <!-- Judul -->
                 <div>
-                    <label for="judul" class="block text-sm font-medium text-gray-700 mb-2">Judul Berita *</label>
+                    <label for="title" class="block text-sm font-medium text-gray-700 mb-2">Judul Berita *</label>
                     <input type="text" 
-                           name="judul" 
-                           id="judul"
-                           value="{{ old('judul') }}"
-                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none text-lg @error('judul') border-red-500 @enderror"
+                           name="title" 
+                           id="title"
+                           value="{{ old('title') }}"
+                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none text-lg @error('title') border-red-500 @enderror"
                            placeholder="Masukkan judul berita..."
                            required>
-                    @error('judul')
+                    @error('title')
                         <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                     @enderror
                 </div>
@@ -57,14 +57,14 @@
                     
                     <!-- Kategori -->
                     <div>
-                        <label for="kategori" class="block text-sm font-medium text-gray-700 mb-2">Kategori</label>
+                        <label for="category" class="block text-sm font-medium text-gray-700 mb-2">Kategori</label>
                         <input type="text" 
-                               name="kategori" 
-                               id="kategori"
-                               value="{{ old('kategori') }}"
-                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none @error('kategori') border-red-500 @enderror"
+                               name="category" 
+                               id="category"
+                               value="{{ old('category') }}"
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none @error('category') border-red-500 @enderror"
                                placeholder="Contoh: Kegiatan, Prestasi, Pengumuman">
-                        @error('kategori')
+                        @error('category')
                             <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                         @enderror
                     </div>
@@ -72,7 +72,7 @@
                 
                 <!-- Gambar -->
                 <div>
-                    <label for="gambar" class="block text-sm font-medium text-gray-700 mb-2">Gambar Cover</label>
+                    <label for="image" class="block text-sm font-medium text-gray-700 mb-2">Gambar Cover</label>
                     <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-primary-400 transition-colors"
                          x-data="{ preview: null }"
                          @dragover.prevent
@@ -81,7 +81,7 @@
                             <div>
                                 <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-3"></i>
                                 <p class="text-gray-600 mb-2">Drag & drop gambar di sini atau</p>
-                                <label for="gambar" class="cursor-pointer text-primary-600 hover:text-primary-700 font-medium">
+                                <label for="image" class="cursor-pointer text-primary-600 hover:text-primary-700 font-medium">
                                     pilih file
                                 </label>
                                 <p class="text-sm text-gray-400 mt-2">PNG, JPG, WEBP (Max. 2MB)</p>
@@ -91,20 +91,20 @@
                             <div class="relative">
                                 <img :src="preview" alt="Preview" class="max-h-48 mx-auto rounded-lg">
                                 <button type="button" 
-                                        @click="preview = null; document.getElementById('gambar').value = ''"
+                                        @click="preview = null; document.getElementById('image').value = ''"
                                         class="absolute top-0 right-0 -mt-2 -mr-2 p-1 bg-red-500 text-white rounded-full hover:bg-red-600">
                                     <i class="fas fa-times text-xs"></i>
                                 </button>
                             </div>
                         </template>
                         <input type="file" 
-                               name="gambar" 
-                               id="gambar"
+                               name="image" 
+                               id="image"
                                accept="image/*"
                                class="hidden"
                                @change="preview = URL.createObjectURL($event.target.files[0])">
                     </div>
-                    @error('gambar')
+                    @error('image')
                         <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                     @enderror
                 </div>
@@ -127,14 +127,14 @@
                 
                 <!-- Konten -->
                 <div>
-                    <label for="konten" class="block text-sm font-medium text-gray-700 mb-2">Konten Berita *</label>
-                    <textarea name="konten" 
-                              id="konten"
+                    <label for="content" class="block text-sm font-medium text-gray-700 mb-2">Konten Berita *</label>
+                    <textarea name="content" 
+                              id="content"
                               rows="15"
-                              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none @error('konten') border-red-500 @enderror"
+                              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none @error('content') border-red-500 @enderror"
                               placeholder="Tulis konten berita di sini..."
-                              required>{{ old('konten') }}</textarea>
-                    @error('konten')
+                              required>{{ old('content') }}</textarea>
+                    @error('content')
                         <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                     @enderror
                 </div>
