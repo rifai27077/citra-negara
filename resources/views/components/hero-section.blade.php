@@ -7,7 +7,8 @@
   <x-vimeo-background
     id="hero-bg"
     class="will-change-transform scale-110"
-    video-id="1185434801"
+    video-src="videos/citra-negara.mp4"
+    optimized-video-src="videos/citra-negara-web.mp4"
     fallback-image="images/hero-cn.png"
   />
 

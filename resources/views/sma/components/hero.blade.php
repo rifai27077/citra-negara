@@ -1,7 +1,8 @@
 <section 
   class="relative h-[95vh] min-h-[600px] w-full flex items-center justify-center bg-[url('/images/hero-fallback.jpg')] bg-cover bg-center">  
   <x-vimeo-background
-    video-id="1185480800"
+    video-src="videos/sma.mp4"
+    optimized-video-src="videos/sma-web.mp4"
     fallback-image="images/u-sma.png"
   />
   <div class="absolute inset-0 w-full h-full z-0">
