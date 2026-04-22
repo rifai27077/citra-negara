@@ -17,7 +17,7 @@ class BeritaForm
     {
         return $schema
             ->components([
-                TextInput::make('judul')
+                TextInput::make('title')
                     ->required(),
                 TextInput::make('slug')
                     ->required(),

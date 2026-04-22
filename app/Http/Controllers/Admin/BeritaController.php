@@ -38,8 +38,8 @@ class BeritaController extends Controller
         if ($request->filled('search')) {
             $search = $request->search;
             $query->where(function ($q) use ($search) {
-                $q->where('judul', 'like', "%{$search}%")
-                  ->orWhere('konten', 'like', "%{$search}%");
+                $q->where('title', 'like', "%{$search}%")
+                  ->orWhere('content', 'like', "%{$search}%");
             });
         }
 
@@ -71,18 +71,18 @@ class BeritaController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $validated = $request->validate([
-            'judul' => 'required|string|max:255',
-            'konten' => 'required|string',
+            'title' => 'required|string|max:255',
+            'content' => 'required|string',
             'excerpt' => 'nullable|string|max:500',
-            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
-            'kategori' => 'nullable|string|max:50',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
+            'category' => 'nullable|string|max:50',
             'jenjang' => 'required|in:umum,smk,smp,sma',
             'is_published' => 'boolean',
         ]);
 
         // Handle image upload
-        if ($request->hasFile('gambar')) {
-            $validated['gambar'] = $request->file('gambar')->store('berita', 'public');
+        if ($request->hasFile('image')) {
+            $validated['image'] = $request->file('image')->store('berita', 'public');
         }
 
         // Set author
@@ -122,22 +122,22 @@ class BeritaController extends Controller
     public function update(Request $request, Berita $beritum): RedirectResponse
     {
         $validated = $request->validate([
-            'judul' => 'required|string|max:255',
-            'konten' => 'required|string',
+            'title' => 'required|string|max:255',
+            'content' => 'required|string',
             'excerpt' => 'nullable|string|max:500',
-            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
-            'kategori' => 'nullable|string|max:50',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
+            'category' => 'nullable|string|max:50',
             'jenjang' => 'required|in:umum,smk,smp,sma',
             'is_published' => 'boolean',
         ]);
 
         // Handle image upload
-        if ($request->hasFile('gambar')) {
+        if ($request->hasFile('image')) {
             // Delete old image
-            if ($beritum->gambar) {
-                Storage::disk('public')->delete($beritum->gambar);
+            if ($beritum->image) {
+                Storage::disk('public')->delete($beritum->image);
             }
-            $validated['gambar'] = $request->file('gambar')->store('berita', 'public');
+            $validated['image'] = $request->file('image')->store('berita', 'public');
         }
 
         // Handle publish status change
@@ -173,8 +173,8 @@ class BeritaController extends Controller
     public function destroy(Berita $beritum): RedirectResponse
     {
         // Delete image
-        if ($beritum->gambar) {
-            Storage::disk('public')->delete($beritum->gambar);
+        if ($beritum->image) {
+            Storage::disk('public')->delete($beritum->image);
         }
 
         $beritum->delete();

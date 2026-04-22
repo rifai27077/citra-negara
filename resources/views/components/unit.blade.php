@@ -15,8 +15,8 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 justify-items-center">
       @foreach ([
         ['title' => 'SMP', 'img' => '/images/u-smp.png', 'desc' => 'Bangun pondasi akademik yang kuat dengan lingkungan yang mendukung dan inovatif.', 'link' => '/smp'],
-        ['title' => 'SMA', 'img' => '/images/u-sma.png', 'desc' => 'Kembangkan potensi akademik dan karakter untuk melangkah ke jenjang berikutnya.', 'link' => '/sma'],
-        ['title' => 'SMK', 'img' => '/images/u-smk.png', 'desc' => 'Siap kerja, siap wirausaha, dan siap kuliah dengan keahlian yang terarah.', 'link' => '/smk'],
+        ['title' => 'SMA', 'img' => '/images/u-sma.jpg', 'desc' => 'Kembangkan potensi akademik dan karakter untuk melangkah ke jenjang berikutnya.', 'link' => '/sma'],
+        ['title' => 'SMK', 'img' => '/images/u-smk.jpg', 'desc' => 'Siap kerja, siap wirausaha, dan siap kuliah dengan keahlian yang terarah.', 'link' => '/smk'],
       ] as $unit)
       <div class="relative group w-full sm:w-72 md:w-80 lg:w-80 perspective" data-aos="zoom-in">
         <div class="tilt-card bg-white rounded-3xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl">

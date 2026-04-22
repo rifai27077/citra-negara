@@ -126,15 +126,15 @@
                         <tr class="hover:bg-gray-50 transition-colors">
                             <td class="px-4 py-4">
                                 <div class="flex items-center gap-4">
-                                    @if($item->gambar)
-                                        <img src="{{ $item->gambar_url }}" alt="" class="w-20 h-14 object-cover rounded-lg">
+                                    @if($item->image)
+                                        <img src="{{ $item->image_url }}" alt="" class="w-20 h-14 object-cover rounded-lg">
                                     @else
                                         <div class="w-20 h-14 bg-gray-100 rounded-lg flex items-center justify-center">
                                             <i class="fas fa-image text-gray-400"></i>
                                         </div>
                                     @endif
                                     <div>
-                                        <p class="font-medium text-gray-900 line-clamp-1">{{ $item->judul }}</p>
+                                        <p class="font-medium text-gray-900 line-clamp-1">{{ $item->title }}</p>
                                         <p class="text-sm text-gray-500 line-clamp-1">{{ $item->excerpt }}</p>
                                     </div>
                                 </div>
