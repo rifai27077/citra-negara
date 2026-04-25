@@ -1,60 +1,125 @@
-<section id="kontak" class="bg-[#f7f7f7] min-h-[600px] py-16 px-6">
-  <div class="max-w-7xl mx-auto">
-    <h2 class="text-3xl font-extrabold text-[#7CB518] mb-10 text-center">Hubungi Kami</h2>
-
-    <!-- Grid dua kolom -->
-    <div class="grid lg:grid-cols-2 gap-10 items-start">
-      
-      <!-- Peta -->
-      <div class="w-full h-[420px] rounded-2xl overflow-hidden shadow-lg">
-        <iframe 
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4940.893907328013!2d106.80721227591576!3d-6.380306262411154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e9207c1051ef%3A0x2283cf22c1ed39f1!2sSMA%20CITRA%20NEGARA!5e1!3m2!1sid!2sid!4v1760591410962!5m2!1sid!2sid"           width="100%" 
-          height="100%" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-
-      <!-- Informasi Kontak -->
-      <div class="bg-white rounded-2xl shadow-md p-8 flex flex-col justify-center">
-        <h3 class="text-2xl font-bold text-[#7CB518] mb-6 text-center">Informasi Kontak</h3>
-
-        <div class="space-y-6 text-gray-800">
-          
-          <!-- Email -->
-          <a href="mailto:info@citranegara.sch.id" class="flex items-center justify-center space-x-3 hover:text-[#7CB518] transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#7CB518]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6m-18 8V8a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-            </svg>
-            <span class="text-lg font-medium underline">info@citranegara.sch.id</span>
-          </a>
-
-          <!-- Telepon -->
-          <a href="tel:02177201052" class="flex items-center justify-center space-x-3 hover:text-[#7CB518] transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#7CB518]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a2 2 0 011.78 1.09l1.34 2.68a2 2 0 01-.45 2.31l-1.22 1.22a16.001 16.001 0 007.07 7.07l1.22-1.22a2 2 0 012.31-.45l2.68 1.34A2 2 0 0121 18.72V20a2 2 0 01-2 2h-1C10.611 22 2 13.389 2 3V2a2 2 0 011-1h1z" />
-            </svg>
-            <span class="text-lg font-medium underline">(021) 77201052</span>
-          </a>
-
-          <!-- WhatsApp -->
-          <a href="https://wa.me/6281325269477" target="_blank" class="flex items-center justify-center space-x-3 hover:text-[#25D366] transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12.04 2C6.53 2 2 6.51 2 12.01c0 1.82.48 3.57 1.4 5.11L2 22l4.98-1.3A9.93 9.93 0 0012.04 22C17.55 22 22 17.49 22 12S17.55 2 12.04 2zm.03 18.22c-1.67 0-3.28-.44-4.7-1.27l-.34-.2-2.95.77.79-2.87-.22-.35A8.15 8.15 0 013.8 12a8.24 8.24 0 018.25-8.22A8.22 8.22 0 0120.3 12a8.24 8.24 0 01-8.23 8.22zm4.67-6.17c-.26-.13-1.54-.76-1.77-.85-.23-.09-.4-.13-.57.13-.17.26-.65.85-.8 1.03-.15.17-.3.2-.56.07-.26-.13-1.1-.4-2.1-1.27a7.75 7.75 0 01-1.44-1.79c-.15-.26 0-.4.11-.53.12-.13.26-.33.39-.5.13-.17.17-.26.26-.43.09-.17.04-.33-.02-.46-.07-.13-.56-1.37-.77-1.87-.2-.48-.4-.41-.57-.42h-.49c-.17 0-.46.07-.7.33-.23.26-.91.89-.91 2.17s.93 2.52 1.06 2.7c.13.17 1.83 2.79 4.44 3.91 2.61 1.12 2.61.75 3.08.71.47-.04 1.54-.63 1.75-1.25.22-.62.22-1.15.15-1.25-.07-.09-.23-.15-.5-.28z"/>
-            </svg>
-            <span class="text-lg font-medium underline">0813-2526-9477 <span class="text-sm text-gray-500">(WA PPDB)</span></span>
-          </a>
-
-          <!-- Jam Operasional -->
-          <div class="pt-6 mt-4 border-t border-gray-200 text-center text-gray-800">
-            <p><strong>Senin – Jumat:</strong> 07:00 – 17:00</p>
-            <p><strong>Sabtu:</strong> 07:00 – 15:00</p>
-          </div>
-
+<div class="min-h-[calc(100vh-80px)] bg-white flex flex-col justify-center py-12 px-6 overflow-hidden relative">
+    <!-- Decorative Elements -->
+    <div class="absolute inset-0 opacity-[0.03] bg-[url('/images/pattern-light.svg')] bg-repeat pointer-events-none"></div>
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none"></div>
+    
+    <div class="max-w-7xl mx-auto w-full relative z-10">
+        <!-- Compact Header -->
+        <div class="text-center mb-12" data-aos="fade-up">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full mb-4 border border-primary/20">
+                <div class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></div>
+                <span class="text-[9px] font-black uppercase tracking-widest text-primary">Get In Touch</span>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-black text-gray-900 tracking-tight">
+                Sudah siap jadi bagian <span class="text-primary">Citra Negara?</span>
+            </h1>
         </div>
-      </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+            <!-- Left Side: Information Cards -->
+            <div class="lg:col-span-5 flex flex-col gap-6" data-aos="fade-right">
+                <!-- Location -->
+                <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 group hover:border-primary/30 transition-all duration-500">
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 shrink-0 rounded-2xl bg-gray-50 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                            <i class="fa-solid fa-location-dot text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-black text-gray-900 mb-1 tracking-tight">Lokasi</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed mb-3">
+                                Jl. Tanah Baru Jl. Kemiri Jaya No.99, Beji, <br>
+                                Kota Depok, Jawa Barat 16421
+                            </p>
+                            <a href="https://maps.app.goo.gl/smkcitranegara" target="_blank" class="inline-flex items-center gap-2 text-primary font-black text-[10px] uppercase tracking-widest group/link">
+                                Petunjuk Arah 
+                                <i class="fa-solid fa-arrow-right transition-transform group-hover/link:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Grid -->
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 group hover:border-primary/30 transition-all">
+                        <div class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all mb-4">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <h4 class="text-sm font-black text-gray-900 mb-1">Email</h4>
+                        <a href="mailto:info@citranegara.sch.id" class="text-gray-500 text-xs truncate block hover:text-primary transition-colors">info@citranegara.sch.id</a>
+                    </div>
+                    <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 group hover:border-primary/30 transition-all">
+                        <div class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all mb-4">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h4 class="text-sm font-black text-gray-900 mb-1">Telepon</h4>
+                        <a href="tel:02177201052" class="text-gray-500 text-xs hover:text-primary transition-colors block font-bold tracking-tight">(021) 77201052</a>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Card -->
+                <div class="bg-[#25D366]/5 p-6 rounded-[2rem] border border-[#25D366]/20 group hover:bg-[#25D366] transition-all duration-500 flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-[#25D366] shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-black text-gray-900 group-hover:text-white transition-colors tracking-tight">Chat WhatsApp</h3>
+                            <p class="text-[#25D366] text-[10px] font-bold group-hover:text-white/80 transition-colors uppercase tracking-widest">Konsultasi PPDB</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/6281325269477" target="_blank" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-900 hover:scale-110 transition-all shadow-sm">
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side: Map & Hours -->
+            <div class="lg:col-span-7 flex flex-col gap-6" data-aos="fade-left">
+                <div class="flex-1 relative rounded-[2.5rem] overflow-hidden border border-gray-100 shadow-sm min-h-[350px]">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3768.914770058075!2d106.808656!3d-6.380465!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eeacc6e549ab%3A0xd6c5c8ece644d8ee!2sSMK%20Citra%20Negara!5e1!3m2!1sen!2sus!4v1760335323522!5m2!1sen!2sus"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        class="absolute inset-0"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <!-- Hours Card -->
+                <div class="bg-gray-900 p-6 rounded-[2rem] text-white flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-secondary">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-black text-sm tracking-tight">Jam Operasional</h4>
+                            <p class="text-white/50 text-[9px] uppercase tracking-widest font-bold">Resepsionis & Administrasi</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="text-center md:text-left">
+                            <p class="text-[8px] text-white/40 font-bold uppercase tracking-widest mb-0.5">Senin - Jumat</p>
+                            <p class="text-xs font-black">07:00 – 17:00</p>
+                        </div>
+                        <div class="w-[1px] h-8 bg-white/10 hidden md:block"></div>
+                        <div class="text-center md:text-left">
+                            <p class="text-[8px] text-white/40 font-bold uppercase tracking-widest mb-0.5">Sabtu</p>
+                            <p class="text-xs font-black">07:00 – 15:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Bar -->
+        <div class="mt-12 flex justify-center">
+            <a href="/" class="group flex items-center gap-3 px-8 py-4 bg-gray-50 hover:bg-gray-100 text-gray-900 font-black rounded-full transition-all duration-300">
+                <i class="fa-solid fa-house text-sm text-primary group-hover:rotate-12 transition-transform"></i>
+                KEMBALI KE BERANDA
+            </a>
+        </div>
     </div>
-  </div>
-</section>
+</div>

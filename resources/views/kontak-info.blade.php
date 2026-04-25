@@ -1,9 +1,3 @@
-@extends('layouts.app')
-
-@section('title', 'Hubungi Kami - Citra Negara')
-@section('meta_description', 'Hubungi Citra Negara untuk informasi lebih lanjut. Alamat: Jl. Raya Tanah Baru No.99 Kemiri Jaya, Depok. Telepon: (021) 77201052. Email: info@citranegara.sch.id')
-
-@section('content')
 <div class="min-h-[calc(100vh-80px)] bg-white flex flex-col justify-center py-12 px-6 overflow-hidden relative">
     <!-- Decorative Elements -->
     <div class="absolute inset-0 opacity-[0.03] bg-[url('/images/pattern-light.svg')] bg-repeat pointer-events-none"></div>
@@ -129,4 +123,3 @@
         </div>
     </div>
 </div>
-@endsection

@@ -5,7 +5,7 @@
     </h2>
     <p class="text-gray-600 max-w-2xl mx-auto mt-4 text-base md:text-lg">
       Inilah deretan prestasi membanggakan siswa-siswi SMA Citra Negara
-      sebagai wujud kerja keras, semangat, dan dedikasi dalam berbagai bidang keahlian.
+      sebagai wujud kerja keras, semangat, dan dedikasi dalam berbagai bidang akademik dan non-akademik.
     </p>
   </div>
 

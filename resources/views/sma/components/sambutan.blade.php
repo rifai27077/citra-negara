@@ -2,7 +2,7 @@
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center justify-center">
     <div class="flex gap-6 items-center md:items-stretch" data-aos="fade-right" data-aos-delay="200">
       <div class="mt-4 grid justify-start">
-        <img src="/images/sma/u-smk2.png" alt="Lapangan SMK" loading="lazy" decoding="async" class="w-64 h-64 object-cover rounded-2xl shadow" />
+        <img src="/images/sma/u-smk2.png" alt="Gedung SMA" loading="lazy" decoding="async" class="w-64 h-64 object-cover rounded-2xl shadow" />
         <div class="bg-[#7CB518] rounded-xl px-10 py-7 flex flex-col items-center shadow mt-4" data-aos="zoom-in" data-aos-delay="200">
           <span class="text-4xl md:text-5xl font-bold text-white leading-none">SMA</span>
           <span class="text-white text-lg font-medium mt-1">Citra Negara</span>
