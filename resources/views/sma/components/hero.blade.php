@@ -1,7 +1,7 @@
 <section 
   class="relative h-[95vh] min-h-[600px] w-full flex items-center justify-center bg-[url('/images/hero-fallback.jpg')] bg-cover bg-center">  
   <x-vimeo-background
-    :embed-url="config('hero.sma.embed_url')"
+    :embed-url="config('hero.sma.embed_url') ?: 'https://vimeo.com/1185480800?fl=pl&fe=sh'"
     fallback-image="images/u-sma.png"
   />
   <div class="absolute inset-0 w-full h-full z-0">

@@ -7,7 +7,7 @@
   <x-vimeo-background
     id="hero-bg"
     class="will-change-transform scale-110"
-    :embed-url="config('hero.home.embed_url')"
+    :embed-url="config('hero.home.embed_url') ?: 'https://vimeo.com/1185434801?fl=ip&fe=ec'"
     fallback-image="images/hero-cn.png"
   />
 
