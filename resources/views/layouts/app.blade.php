@@ -36,8 +36,14 @@
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <link rel="preconnect" href="https://player.vimeo.com">
     <link rel="preconnect" href="https://i.vimeocdn.com" crossorigin>
+    <link rel="preconnect" href="https://www.youtube-nocookie.com">
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://i.ytimg.com" crossorigin>
     <link rel="dns-prefetch" href="//player.vimeo.com">
     <link rel="dns-prefetch" href="//i.vimeocdn.com">
+    <link rel="dns-prefetch" href="//www.youtube-nocookie.com">
+    <link rel="dns-prefetch" href="//www.youtube.com">
+    <link rel="dns-prefetch" href="//i.ytimg.com">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
